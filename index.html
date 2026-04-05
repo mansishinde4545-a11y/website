@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Travels - Book Your Dream Vacation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-plane"></i>
+                <span>Magic Travels</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#bookings">Bookings</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your <span class="highlight">Dream</span> Vacation Starts Here!</h1>
+            <p>Special discounts on travel packages worldwide</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="openBookingModal()">Book Now</button>
+                <button class="btn-secondary" onclick="scrollToPackages()">View Packages</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <h2 class="section-title">Our <span>Popular</span> Packages</h2>
+            <div class="packages-grid" id="packagesGrid"></div>
+        </div>
+    </section>
+
+    <!-- Bookings History Section -->
+    <section id="bookings" class="bookings">
+        <div class="container">
+            <h2 class="section-title">📋 Your <span>Bookings</span></h2>
+            <div class="bookings-container">
+                <button class="add-booking-btn" onclick="openBookingModal()">
+                    <i class="fas fa-plus"></i> New Booking
+                </button>
+                <div class="bookings-list" id="bookingsList"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="about-grid">
+                <div class="about-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>100% Safe</h3>
+                    <p>Fully insured trips with 24/7 support</p>
+                </div>
+                <div class="about-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Best Prices</h3>
+                    <p>Guaranteed lowest rates with no hidden charges</p>
+                </div>
+                <div class="about-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Expert Guides</h3>
+                    <p>Experienced local guides for authentic experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Booking Form</h2>
+            <form id="bookingForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="email" placeholder="Email Address">
+                <select id="packageSelect" required>
+                    <option value="">Select Package</option>
+                </select>
+                <input type="date" required>
+                <input type="number" placeholder="Number of People" min="1" max="10" required>
+                <textarea placeholder="Special Requirements" rows="3"></textarea>
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Magic Travels</h3>
+                    <p>Your trusted travel partner</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@magictravels.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Magic Travels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
